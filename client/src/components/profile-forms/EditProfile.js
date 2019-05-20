@@ -78,7 +78,7 @@ const EditProfile = ({
 
   return (
     <Fragment>
-      {console.log('render')}
+      {console.log('render', loading)}
       <h1 className="large text-primary">Create Your Profile</h1>
       <p className="lead">
         <i className="fas fa-user" /> Let's get some information to make your
