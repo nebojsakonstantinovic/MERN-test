@@ -126,13 +126,13 @@ router.post(
         // update
         profile = await Profile.findOneAndUpdate(
           {
-            user: req.user.id,
+            user: req.user.id
           },
           {
-            $set: profileFields,
+            $set: profileFields
           },
           {
-            new: true,
+            new: true
           }
         );
 
@@ -412,9 +412,9 @@ router.get('/github/:username', async (req, res) => {
     const options = {
       uri: `https://api.github.com/users/${
         req.params.username
-      }/repos?per_page=5&sort=created:asc&client_id=${config.get(
-        'githubClientId'
-      )}&client_secret=${config.get('githubSecret')}`,
+        }/repos?per_page=5&sort=created:asc&client_id=${config.get(
+          'githubClientId'
+        )}&client_secret=${config.get('githubSecret')}`,
       method: 'GET',
       headers: { 'user-agent': 'node.js' },
     };
